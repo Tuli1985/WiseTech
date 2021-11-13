@@ -1,3 +1,7 @@
+
+.bajar{
+  margin-top: 300px;
+}
 .navbar {
   box-shadow: 2px 2px 5px rgb(0, 0, 0);
   opacity: 0.8;
@@ -25,3 +29,4 @@
 }
 .team, footer {
   background: #000000;
+}

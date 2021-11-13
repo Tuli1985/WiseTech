@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="hablemosDeTesting.css">
+   
   </head>
   <body>
     <!-- NAVEGACION -->
@@ -42,7 +43,7 @@
     <!-- HEADER -->
     <header class="main-header">
       <div class="background-overlay text-light py-5">
-        <div class="container">
+        <div class="container bajar">
           <div class="row d-flex h-100">
             <div class="col-sm-12 text-center justify-content-center align-self-center">
               <h1>
@@ -59,24 +60,7 @@
       </div>
     </header>
 
-    <!-- REUNION  -->
-    <section id="newsletter" class="bg-light text-white py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <input type="text" class="form-control form-control-lg" placeholder="Empresa">
-          </div>
-          <div class="col-md-4">
-            <input type="email" class="form-control form-control-lg" placeholder="E-mail">
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-warning btn-lg btn-block">
-              Solicitar una reunion
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- ANUNCIOS -->
 
@@ -177,44 +161,55 @@
       </div>
     </section>
 
-   
-    <!-- CONTACTO -->
-    <section class="bg-light py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9">
-            <h3>Solicitar un presupuesto</h3>
-            <p>
-              Contanos mas sobre tu proyecto
-            </p>
-            <form enctype="text/plain" action="mailto:wisetech@gmail.com" method="post">
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <i class="fas fa-user input-group-text"></i>
-                </div>
-                <input type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <i class="fas fa-envelope input-group-text"></i>
-                </div>
-                <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <i class="fas fa-pencil-alt input-group-text"></i>
-                </div>
-                <textarea name="" cols="30" rows="10" placeholder="Comentario" class="form-control"></textarea>
-              </div>
-              <button type="submit" class="btn btn-warning btn-block">Enviar</button>
-            </form>
+<!-- CONTACTO -->
+<section class="bg-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <h3>Solicitar un presupuesto</h3>
+        <p>
+          Contanos mas sobre tu proyecto
+        </p>
+        <form id="todo_form">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <i class="fas fa-user input-group-text"></i>
+            </div>
+            <input type="text"  id="todo_name" class="form-control" placeholder="Nombre" aria-label="Username"
+              aria-describedby="basic-addon1" required>
           </div>
-          <div class="col-lg-3 align-self-center">
-            <img src="#" alt="">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <i class="fas fa-envelope input-group-text"></i>
+            </div>
+            <input type="email" id="todo_url" class="form-control" placeholder="E-mail" aria-label="Username"
+              aria-describedby="basic-addon1" required>
           </div>
-        </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <i class="fas fa-phone-square input-group-text"></i>
+            </div>
+            <input type="tel" id="todo_phone" class="form-control" placeholder="N° de Telefono" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <i class="fas fa-pencil-alt input-group-text"></i>
+            </div>
+            <textarea id="todo_description" name="" cols="30" rows="10" placeholder="Comentario" class="form-control" required></textarea>
+          </div>
+          <div class="text-center"id="cont3" onkeyup="escribir2()"></div>
+          <button type="submit" id='btn_todo_form' class="btn btn-warning btn-block">Enviar</button>
+        </form>
       </div>
-    </section>
+      <div class="col-lg-3 align-self-center">
+        <img src="#" alt="">
+      </div>
+    </div>
+  </div>
+</section>
 
     <footer>
       <div class="container p-3">
@@ -230,5 +225,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+  <script type="text/javascript" src="index_.js"></script>
+  <script src="index.js"></script>
   </body>
 </html>
