@@ -1,5 +1,6 @@
 
 const db = firebase.firestore();
+const fecha=new Date();
 
 const todoForm = document.getElementById('todo_form');
 
@@ -20,7 +21,7 @@ todoForm.addEventListener('submit', async e => {
     escribir2("ok")
     e.preventDefault();
     const name = todoForm['todo_name'].value;
-    const datecreated= new Date();
+    const datecreated=fecha.toString();
     const email = todoForm['todo_url'].value;
     const telephone = todoForm['todo_phone'].value;
     const message = todoForm['todo_description'].value;
